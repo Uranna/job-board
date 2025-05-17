@@ -1,0 +1,24 @@
+{
+  "vacancies": [
+    {
+      "id": "1",
+      "title": "Frontend Developer (React/Next.js)",
+      "description": "Разработка современных веб-приложений",
+      "salary": 150000,
+      "company": "Tech Innovations",
+      "experience": "1-3 года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-15T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "title": "Backend Engineer (Node.js)",
+      "description": "Разработка серверной части приложений",
+      "salary": 180000,
+      "company": "Data Systems",
+      "experience": "3+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-20T14:30:00Z"
+    }
+  ]
+}

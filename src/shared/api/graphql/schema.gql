@@ -1,0 +1,15 @@
+type Vacancy {
+  id: ID!
+  title: String!
+  description: String!
+  salary: Float
+  company: String!
+  experience: String!
+  employmentType: String!
+  createdAt: String!
+}
+
+type Query {
+  vacancies: [Vacancy!]!
+  vacancy(id: ID!): Vacancy
+}
