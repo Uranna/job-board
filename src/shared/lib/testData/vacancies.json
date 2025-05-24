@@ -19,6 +19,336 @@
       "experience": "3+ года",
       "employmentType": "fulltime",
       "createdAt": "2024-01-20T14:30:00Z"
+    },
+    {
+      "id": "3",
+      "title": "UX/UI Designer",
+      "description": "Создание интерфейсов и пользовательских сценариев",
+      "salary": 120000,
+      "company": "Creative Agency",
+      "experience": "2+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-10T09:15:00Z"
+    },
+    {
+      "id": "4",
+      "title": "DevOps Engineer",
+      "description": "Настройка и поддержка CI/CD процессов",
+      "salary": 200000,
+      "company": "Cloud Solutions",
+      "experience": "3+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-18T11:20:00Z"
+    },
+    {
+      "id": "5",
+      "title": "Data Scientist",
+      "description": "Анализ данных и построение ML-моделей",
+      "salary": 190000,
+      "company": "AI Research Lab",
+      "experience": "2+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-22T16:45:00Z"
+    },
+    {
+      "id": "6",
+      "title": "Mobile Developer (Flutter)",
+      "description": "Разработка кроссплатформенных мобильных приложений",
+      "salary": 160000,
+      "company": "App Masters",
+      "experience": "1-3 года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-14T13:10:00Z"
+    },
+    {
+      "id": "7",
+      "title": "Product Manager",
+      "description": "Управление продуктом и разработка roadmap",
+      "salary": 170000,
+      "company": "Product Vision",
+      "experience": "3+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-17T15:30:00Z"
+    },
+    {
+      "id": "8",
+      "title": "QA Engineer",
+      "description": "Тестирование веб и мобильных приложений",
+      "salary": 110000,
+      "company": "Quality Assurance Pro",
+      "experience": "1+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-19T12:00:00Z"
+    },
+    {
+      "id": "9",
+      "title": "System Administrator",
+      "description": "Обслуживание IT-инфраструктуры компании",
+      "salary": 130000,
+      "company": "IT Services",
+      "experience": "2+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-16T14:20:00Z"
+    },
+    {
+      "id": "10",
+      "title": "Frontend Developer (Vue.js)",
+      "description": "Разработка клиентской части веб-приложений",
+      "salary": 140000,
+      "company": "Web Solutions",
+      "experience": "1-3 года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-21T10:45:00Z"
+    },
+    {
+      "id": "11",
+      "title": "Backend Developer (Python/Django)",
+      "description": "Разработка API и бизнес-логики",
+      "salary": 170000,
+      "company": "Python Experts",
+      "experience": "2+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-23T11:30:00Z"
+    },
+    {
+      "id": "12",
+      "title": "HR Manager",
+      "description": "Подбор и адаптация IT-специалистов",
+      "salary": 90000,
+      "company": "HR Partners",
+      "experience": "2+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-12T09:00:00Z"
+    },
+    {
+      "id": "13",
+      "title": "SEO Specialist",
+      "description": "Продвижение сайтов в поисковых системах",
+      "salary": 100000,
+      "company": "Digital Marketing",
+      "experience": "1+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-24T13:45:00Z"
+    },
+    {
+      "id": "14",
+      "title": "Fullstack Developer",
+      "description": "Разработка полного цикла веб-приложений",
+      "salary": 190000,
+      "company": "Code Factory",
+      "experience": "3+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-11T16:20:00Z"
+    },
+    {
+      "id": "15",
+      "title": "Game Developer (Unity)",
+      "description": "Создание мобильных и desktop игр",
+      "salary": 150000,
+      "company": "Game Studio",
+      "experience": "2+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-25T14:10:00Z"
+    },
+    {
+      "id": "16",
+      "title": "Technical Writer",
+      "description": "Написание технической документации",
+      "salary": 95000,
+      "company": "Doc Solutions",
+      "experience": "1+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-13T12:30:00Z"
+    },
+    {
+      "id": "17",
+      "title": "Data Analyst",
+      "description": "Анализ данных и подготовка отчетов",
+      "salary": 130000,
+      "company": "Analytics Pro",
+      "experience": "1-3 года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-26T10:15:00Z"
+    },
+    {
+      "id": "18",
+      "title": "Security Engineer",
+      "description": "Обеспечение информационной безопасности",
+      "salary": 210000,
+      "company": "Cyber Security",
+      "experience": "3+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-27T15:40:00Z"
+    },
+    {
+      "id": "19",
+      "title": "Marketing Manager",
+      "description": "Разработка и реализация маркетинговых стратегий",
+      "salary": 110000,
+      "company": "Market Leaders",
+      "experience": "2+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-28T11:50:00Z"
+    },
+    {
+      "id": "20",
+      "title": "iOS Developer (Swift)",
+      "description": "Разработка нативных мобильных приложений",
+      "salary": 180000,
+      "company": "Mobile Tech",
+      "experience": "2+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-29T14:25:00Z"
+    },
+    {
+      "id": "21",
+      "title": "Android Developer (Kotlin)",
+      "description": "Разработка нативных Android приложений",
+      "salary": 175000,
+      "company": "App Builders",
+      "experience": "2+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-30T10:05:00Z"
+    },
+    {
+      "id": "22",
+      "title": "Project Manager",
+      "description": "Управление IT-проектами",
+      "salary": 160000,
+      "company": "PM Solutions",
+      "experience": "3+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-01-31T13:15:00Z"
+    },
+    {
+      "id": "23",
+      "title": "Business Analyst",
+      "description": "Анализ бизнес-процессов и требований",
+      "salary": 140000,
+      "company": "Business Solutions",
+      "experience": "2+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-02-01T09:30:00Z"
+    },
+    {
+      "id": "24",
+      "title": "Cloud Architect",
+      "description": "Проектирование облачных решений",
+      "salary": 220000,
+      "company": "Cloud Experts",
+      "experience": "5+ лет",
+      "employmentType": "fulltime",
+      "createdAt": "2024-02-02T16:50:00Z"
+    },
+    {
+      "id": "25",
+      "title": "Scrum Master",
+      "description": "Фасилитация agile-процессов",
+      "salary": 150000,
+      "company": "Agile Team",
+      "experience": "3+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-02-03T14:40:00Z"
+    },
+    {
+      "id": "26",
+      "title": "Support Engineer",
+      "description": "Техническая поддержка пользователей",
+      "salary": 90000,
+      "company": "Customer Care",
+      "experience": "1+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-02-04T12:20:00Z"
+    },
+    {
+      "id": "27",
+      "title": "Database Administrator",
+      "description": "Администрирование и оптимизация БД",
+      "salary": 160000,
+      "company": "Data Management",
+      "experience": "3+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-02-05T11:10:00Z"
+    },
+    {
+      "id": "28",
+      "title": "Embedded Software Engineer",
+      "description": "Разработка ПО для встроенных систем",
+      "salary": 170000,
+      "company": "Embedded Systems",
+      "experience": "2+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-02-06T15:25:00Z"
+    },
+    {
+      "id": "29",
+      "title": "Content Manager",
+      "description": "Создание и управление контентом",
+      "salary": 85000,
+      "company": "Content Factory",
+      "experience": "1+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-02-07T10:50:00Z"
+    },
+    {
+      "id": "30",
+      "title": "Sales Manager (IT)",
+      "description": "Продажи IT-решений и услуг",
+      "salary": 120000,
+      "company": "IT Sales",
+      "experience": "2+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-02-08T13:35:00Z"
+    },
+    {
+      "id": "31",
+      "title": "Frontend Team Lead",
+      "description": "Руководство командой фронтенд-разработчиков",
+      "salary": 230000,
+      "company": "Tech Leaders",
+      "experience": "5+ лет",
+      "employmentType": "fulltime",
+      "createdAt": "2024-02-09T16:15:00Z"
+    },
+    {
+      "id": "32",
+      "title": "Blockchain Developer",
+      "description": "Разработка смарт-контрактов и блокчейн решений",
+      "salary": 210000,
+      "company": "Crypto Tech",
+      "experience": "3+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-02-10T14:05:00Z"
+    },
+    {
+      "id": "33",
+      "title": "3D Artist",
+      "description": "Создание 3D-графики и анимации",
+      "salary": 130000,
+      "company": "Design Studio",
+      "experience": "2+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-02-11T11:45:00Z"
+    },
+    {
+      "id": "34",
+      "title": "Network Engineer",
+      "description": "Проектирование и обслуживание сетей",
+      "salary": 150000,
+      "company": "Network Solutions",
+      "experience": "3+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-02-12T10:30:00Z"
+    },
+    {
+      "id": "35",
+      "title": "PHP Developer",
+      "description": "Разработка веб-приложений на PHP",
+      "salary": 140000,
+      "company": "Web Development",
+      "experience": "2+ года",
+      "employmentType": "fulltime",
+      "createdAt": "2024-02-13T13:20:00Z"
     }
   ]
 }

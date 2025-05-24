@@ -7,9 +7,11 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang="en">
       <body>
         <Providers>
-          {children}
-        </Providers>
-      </body>
-    </html>
-  );
+          <div className='min-h-screen bg-gray-900 text-gray-200'>
+            {children}
+          </div>
+      </Providers>
+    </body>
+  </html>
+);
 }

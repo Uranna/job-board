@@ -13,7 +13,7 @@ export const VacanciesList = () => {
   if (error) return <div>Error: {error.message}</div>;
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <>
       <FilterPanel />
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -30,6 +30,6 @@ export const VacanciesList = () => {
       </div>
 
       <Pagination className="mt-8" />
-    </div>
+    </>
   );
 };

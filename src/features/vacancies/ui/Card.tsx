@@ -17,15 +17,17 @@ export const VacancyCard: FC<VacancyCardProps> = ({
   experience,
   employmentType,
 }) => (
-  <div className="border rounded-lg p-6 hover:shadow-md transition-shadow">
+  <div className="flex flex-col bg-gray-800 border border-blue-500 rounded-lg p-6 hover:shadow-md transition-shadow">
+    <div className="flex-1">
+
     <div className="flex justify-between items-start">
       <div>
         <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="text-gray-600 mt-1">{company}</p>
+        <p className="text-gray-400 mt-1">{company}</p>
       </div>
       {salary && (
-        <span className="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm">
-          {salary.toLocaleString()} ₽
+        <span className="bg-blue-500 text-blue-50 px-3 py-1 rounded-full text-sm whitespace-nowrap">
+          {`${salary.toLocaleString()} ₽`}
         </span>
       )}
     </div>
@@ -35,7 +37,8 @@ export const VacancyCard: FC<VacancyCardProps> = ({
       <Badge>{employmentType}</Badge>
     </div>
 
-    <Button variant="outline" size="sm" className="mt-6 w-full">
+      </div>
+    <Button variant="primary"  className="mt-6 w-full">
       Подробнее
     </Button>
   </div>
