@@ -11,8 +11,66 @@ const typeDefs = readFileSync(
 
 const resolvers = {
   Query: {
-    vacancies: () => vacanciesData.vacancies,
-    vacancy: (_: any, { id }: { id: string }) => 
+    vacancies: (
+      _: any,
+      { filter, page = 1, perPage = 10 }: {
+        filter?: {
+          minSalary?: number;
+          maxSalary?: number;
+          experience?: string[];
+          employmentType?: string[];
+          search?: string;
+        };
+        page?: number;
+        perPage?: number;
+      }
+    ) => {
+      let filteredVacancies = [...vacanciesData.vacancies];
+
+      // Применяем фильтры
+      if (filter) {
+        const { maxSalary, minSalary, employmentType, experience, search } = filter;
+
+        if (typeof minSalary === 'number') {
+          filteredVacancies = filteredVacancies.filter(v => v.salary >= minSalary);
+        }
+
+        if (typeof maxSalary === 'number') {
+          filteredVacancies = filteredVacancies.filter(v => v.salary <= maxSalary);
+        }
+
+        if (experience?.length) {
+          filteredVacancies = filteredVacancies.filter(v =>
+            experience.includes(v.experience)
+          );
+        }
+
+        if (employmentType?.length) {
+          filteredVacancies = filteredVacancies.filter(v =>
+            employmentType.includes(v.employmentType)
+          );
+        }
+
+        if (search) {
+          const searchLower = search.toLowerCase();
+          filteredVacancies = filteredVacancies.filter(v =>
+            v.title.toLowerCase().includes(searchLower) ||
+            v.company.toLowerCase().includes(searchLower) ||
+            v.description.toLowerCase().includes(searchLower)
+          );
+        }
+      }
+
+      // Применяем пагинацию
+      const startIndex = (page - 1) * perPage;
+      const paginatedItems = filteredVacancies.slice(startIndex, startIndex + perPage);
+
+      return {
+        items: paginatedItems,
+        totalCount: filteredVacancies.length
+      };
+    },
+    vacancy: (_: any, { id }: { id: string }) =>
       vacanciesData.vacancies.find(v => v.id === id),
   },
 };

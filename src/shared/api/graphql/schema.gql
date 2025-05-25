@@ -2,14 +2,31 @@ type Vacancy {
   id: ID!
   title: String!
   description: String!
-  salary: Float
+  salary: Int!
   company: String!
   experience: String!
   employmentType: String!
   createdAt: String!
 }
 
+input VacancyFilterInput {
+  minSalary: Int
+  maxSalary: Int
+  experience: [String!]
+  employmentType: [String!]
+  search: String
+}
+
+type VacanciesResult {
+  items: [Vacancy!]!
+  totalCount: Int!
+}
+
 type Query {
-  vacancies: [Vacancy!]!
+  vacancies(
+    filter: VacancyFilterInput
+    page: Int = 1
+    perPage: Int = 10
+  ): VacanciesResult!
   vacancy(id: ID!): Vacancy
 }

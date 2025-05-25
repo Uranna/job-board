@@ -1,52 +1,50 @@
-// shared/ui/components/pagination.tsx
-import { twMerge } from 'tailwind-merge';
 import { Button } from '../primitives/button';
+import { FC } from 'react';
+import { ChevronLeftIcon, ChevronRightIcon } from '@radix-ui/react-icons';
 
 type PaginationProps = {
   currentPage?: number;
   totalPages?: number;
-  onPageChange?: (page: number) => void;
+  onPageChange: (currentPage: number) => void;
   className?: string;
 };
 
-export const Pagination = ({
-  currentPage = 1,
-  totalPages = 1,
-  onPageChange,
-  className,
-}: PaginationProps) => {
+export const Pagination: FC<PaginationProps> = ({ currentPage = 1, totalPages = 1, onPageChange }) => {
+  if (totalPages < 2) {
+    return null;
+  }
+
   return (
-    <div className={twMerge('flex items-center justify-center gap-2', className)}>
-      <Button
-        variant="outline"
-        size="sm"
-        disabled={currentPage <= 1}
-        onClick={() => onPageChange?.(currentPage - 1)}
-      >
-        Назад
-      </Button>
-      
-      <div className="flex items-center gap-1">
-        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+    <div className="mt-8 flex justify-center">
+      <nav className="flex gap-2 rounded-md shadow">
+        <Button
+          onClick={() => onPageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          variant={'primary'}
+          className="p-2"
+        >
+          <ChevronLeftIcon />
+        </Button>
+
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map(p => (
           <Button
-            key={page}
-            variant={page === currentPage ? 'primary' : 'outline'}
-            size="sm"
-            onClick={() => onPageChange?.(page)}
+            key={p}
+            onClick={() => onPageChange(p)}
+            variant={p === currentPage ? 'primary' : 'outline'}
+            className='p-2'
           >
-            {page}
+            {p}
           </Button>
         ))}
-      </div>
 
-      <Button
-        variant="outline"
-        size="sm"
-        disabled={currentPage >= totalPages}
-        onClick={() => onPageChange?.(currentPage + 1)}
-      >
-        Вперед
-      </Button>
-    </div>
-  );
+        <Button
+          onClick={() => onPageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          variant='primary'
+          className="p-2"
+        >
+          <ChevronRightIcon />
+        </Button>
+      </nav>
+    </div>);
 };
