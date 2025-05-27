@@ -26,4 +26,4 @@
 
 ## Деплой
 
-https://job-board-nu-opal.vercel.app/
+https://job-board-seven-sandy.vercel.app/
