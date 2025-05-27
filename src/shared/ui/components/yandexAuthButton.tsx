@@ -4,7 +4,7 @@ export const YandexAuthButton = () => {
   return (
     <Button
       variant="outline"
-      className="w-full bg-[#FFCC00] text-[#000] hover:bg-[#FFDB4D] active:bg-[#FFDB4D] flex items-center justify-center gap-2"
+      className="w-full bg-[#FFCC00] text-[#000] hover:bg-[#FFDB4D] active:bg-[#FFDB4D] border-none flex items-center justify-center gap-2"
       onClick={() => {
         window.location.href = '/api/auth/yandex';
       }}

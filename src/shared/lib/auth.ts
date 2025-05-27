@@ -1,7 +1,6 @@
 import { jwtVerify, SignJWT } from "jose";
 import { users, Role } from "./users";
 import type { User } from "./users";
-import bcrypt from "bcryptjs";
 
 // Генерация JWT
 export async function generateJWT(userId: User['id']) {
@@ -43,20 +42,3 @@ export function createUser(user: Omit<User, 'id'>) {
   users.push(newUser);
   return newUser;
 }
-
-(async function() {
-  if (!users.length) {
-    const password = await bcrypt.hash('12345', 10);
-
-    createUser({
-      email: 'user@test.ru',
-      password,
-    })
-
-    createUser({
-      email: 'hr@test.ru',
-      password,
-      role: [Role.HR],
-    })
-  }
-})();

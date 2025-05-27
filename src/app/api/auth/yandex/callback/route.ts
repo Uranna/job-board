@@ -23,6 +23,7 @@ export async function GET(request: Request) {
 
   try {
     // 1. Получаем access_token от Яндекса
+    const redirectUri = new URL(process.env.YANDEX_REDIRECT_URI!, request.url).href;
     const { data: tokenData } = await axios.post(
       'https://oauth.yandex.ru/token',
       new URLSearchParams({
@@ -30,7 +31,7 @@ export async function GET(request: Request) {
         code: code,
         client_id: process.env.YANDEX_CLIENT_ID!,
         client_secret: process.env.YANDEX_CLIENT_SECRET!,
-        redirect_uri: process.env.YANDEX_REDIRECT_URI!
+        redirect_uri: redirectUri,
       }),
       {
         headers: {
@@ -64,18 +65,11 @@ export async function GET(request: Request) {
     // 4. Генерируем JWT
     const jwtToken = await generateJWT(user.id);
 
-    // 5. Сохраняем все токены в куки
-    const cookieOptions = {
-      path: '/',
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax' as const
-    };
-
+    // 5. Сохраняем токен в куки
     const cookiesStore = await cookies();
 
     cookiesStore.set('token', jwtToken, {
-      ...cookieOptions,
+      httpOnly: true,
       maxAge: 60 * 60,
     });
 

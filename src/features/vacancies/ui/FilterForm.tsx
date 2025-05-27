@@ -23,8 +23,8 @@ export const VacanciesFilterForm: FC<VacanciesFilterFormProps> = ({ onClose }) =
     },
     onSubmit: (values) => {
       setFilters({
-        minSalary: values.minSalary,
-        maxSalary: values.maxSalary,
+        minSalary: values.minSalary || undefined,
+        maxSalary: values.maxSalary || undefined,
         search: values.search,
         experience: values.experience,
         employmentType: values.employmentType,
