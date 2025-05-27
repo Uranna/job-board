@@ -201,7 +201,7 @@ describe('Компонент VacanciesList', () => {
     const refetchMock = jest.fn();
     
     // Мокаем useQuery
-    jest.spyOn(require('@apollo/client'), 'useQuery').mockReturnValue({
+    jest.spyOn(require('@apollo/client'), 'useQuery').mockReturnValue({ // eslint-disable-line @typescript-eslint/no-require-imports
       loading: false,
       error: null,
       data: mockVacanciesData,
@@ -210,7 +210,7 @@ describe('Компонент VacanciesList', () => {
   
     const testStore = createTestStore();
   
-    const { rerender } = render(
+    render(
       <JotaiProvider store={testStore}>
         <MockedProvider mocks={successMock} addTypename={false}>
           <VacanciesList />

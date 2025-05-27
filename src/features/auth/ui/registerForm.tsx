@@ -39,7 +39,7 @@ export const RegisterForm: FC<RegisterFormProps> = () => {
         setError('')
         const res = await axios.post('/api/auth/register', values);
         if (res.status === 200) router.push('/');
-      } catch (e: any) {
+      } catch (e: any) { // eslint-disable-line @typescript-eslint/no-explicit-any
         setError(e?.response?.data?.error || 'Произошла ошибка.');
       }
     },

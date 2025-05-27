@@ -36,7 +36,7 @@ export const LoginForm = () => {
       try {
         const res = await axios.post('/api/auth/login', values);
         if (res.status === 200) router.push('/');
-      } catch (e: any) {
+      } catch (e: any) { // eslint-disable-line @typescript-eslint/no-explicit-any
         setError(e?.response?.data?.error || 'Произошла ошибка.')
       }
     },

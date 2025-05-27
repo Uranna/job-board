@@ -8,10 +8,12 @@ export type VacancyFilters = {
   search: string;
 };
 
-export const filtersAtom = atom<VacancyFilters>({
+export const initialFiltersAtom = {
   minSalary: undefined,
   maxSalary: undefined,
   experience: [],
   employmentType: [],
   search: '',
-});  
+}
+
+export const filtersAtom = atom<VacancyFilters>(initialFiltersAtom);  

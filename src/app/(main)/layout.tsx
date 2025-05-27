@@ -6,9 +6,11 @@ import { useAtom } from 'jotai';
 import { userAtom } from '@/shared/store/userInfo';
 import { Header } from '@/widgets/Header';
 import { redirect } from 'next/navigation';
+import { filtersAtom, initialFiltersAtom } from '@/shared/store/filters';
 
 export default function RootLayout({ children }: PropsWithChildren) {
-  const [_, setUser] = useAtom(userAtom)
+  const [_, setUser] = useAtom(userAtom);
+  const [__, setFilters] = useAtom(filtersAtom);
 
   useEffect(() => {
     (async function () {
@@ -25,7 +27,11 @@ export default function RootLayout({ children }: PropsWithChildren) {
       }
 
     })();
-  }, [])
+  }, [setUser]);
+
+  useEffect(() => {
+    setFilters(initialFiltersAtom)
+  }, [setFilters]);
 
   return (
     <>

@@ -24,16 +24,8 @@ export const VacanciesList = () => {
   });
 
   useEffect(() => {
-    if (!loading) {
-      setPage(1);
-      refetch({
-        page: 1,
-        perPage,
-        filter: filters,
-      });
-    }
-  }, [filters])
-
+    setPage(1);
+  }, [filters]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;

@@ -12,7 +12,7 @@ const typeDefs = readFileSync(
 const resolvers = {
   Query: {
     vacancies: (
-      _: any,
+      _: any, // eslint-disable-line @typescript-eslint/no-explicit-any
       { filter, page = 1, perPage = 10 }: {
         filter?: {
           minSalary?: number;
@@ -27,7 +27,6 @@ const resolvers = {
     ) => {
       let filteredVacancies = [...vacanciesData.vacancies];
 
-      // Применяем фильтры
       if (filter) {
         const { maxSalary, minSalary, employmentType, experience, search } = filter;
 
@@ -61,7 +60,6 @@ const resolvers = {
         }
       }
 
-      // Применяем пагинацию
       const startIndex = (page - 1) * perPage;
       const paginatedItems = filteredVacancies.slice(startIndex, startIndex + perPage);
 
@@ -70,7 +68,7 @@ const resolvers = {
         totalCount: filteredVacancies.length
       };
     },
-    vacancy: (_: any, { id }: { id: string }) =>
+    vacancy: (_: any, { id }: { id: string }) => // eslint-disable-line @typescript-eslint/no-explicit-any
       vacanciesData.vacancies.find(v => v.id === id),
   },
 };
