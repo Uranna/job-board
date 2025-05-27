@@ -1,5 +1,5 @@
 import { ApolloServer } from '@apollo/server';
-import { startServerAndCreateNextHandler } from '@as-integrations/next';
+import { NextResponse } from 'next/server';
 import { readFileSync } from 'fs';
 import path from 'path';
 import vacanciesData from '@/shared/lib/testData/vacancies.json';
@@ -75,7 +75,30 @@ const resolvers = {
   },
 };
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
 
-export const GET = startServerAndCreateNextHandler(server);
-export const POST = startServerAndCreateNextHandler(server);
+await server.start();
+
+export async function POST(request: Request) {
+  const body = await request.json();
+  const response = await server.executeOperation(body);
+  
+  if (response.body.kind === 'single') {
+    return NextResponse.json(response.body.singleResult);
+  }
+  
+  return NextResponse.json(response);
+}
+
+export async function GET() {
+  return new NextResponse(
+    JSON.stringify({ error: 'GET requests not supported for GraphQL' }),
+    {
+      status: 405,
+      headers: { 'Content-Type': 'application/json' },
+    }
+  );
+}
